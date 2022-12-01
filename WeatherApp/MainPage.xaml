@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage"
+             xmlns:local="clr-namespace:WeatherApp">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="Gray"/>
+            </Style>
+            <Style x:Key="labelResultStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Aspect="Fill" HeightRequest="300"
+               Source="overlay.png" VerticalOptions="StartAndExpand"/>
+
+        <StackLayout Margin="20,50" 
+                     HorizontalOptions="Start" 
+                     Orientation="Vertical" 
+                     Spacing="20"
+                     VerticalOptions="Start">
+
+            <Label FontSize="16" 
+                   Text="Karachi"
+                   TextColor="White"
+                   VerticalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Margin="0,20" HorizontalOptions="Center" Orientation="Vertical"
+                     VerticalOptions="Center">
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Image HeightRequest="50" 
+                       Source="weather.png"
+                       VerticalOptions="Center"
+                       WidthRequest="50"/>
+                <Label FontAttributes="Bold" 
+                       FontSize="70" 
+                       Text="12" 
+                       TextColor="White" 
+                       VerticalOptions="Center"/>
+                <Label 
+                       FontSize="34" 
+                       Text="°C" 
+                       TextColor="White" 
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            <Label 
+                FontSize="16" 
+                Text="rain" 
+                TextColor="White" 
+                HorizontalOptions="Center"/>
+            <Label
+                FontSize="12"
+                Text="June 15, 10:00 AM"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <Frame Grid.Row="1" Margin="20,-40,20,0" Padding="0" CornerRadius="10"
+               HasShadow="True" HeightRequest="120" VerticalOptions="Start">
+
+            <Grid Margin="0,35">
+        
+
+            </Grid>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>
