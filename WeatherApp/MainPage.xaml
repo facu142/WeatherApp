@@ -74,12 +74,107 @@
         <Frame Grid.Row="1" Margin="20,-40,20,0" Padding="0" CornerRadius="10"
                HasShadow="True" HeightRequest="120" VerticalOptions="Start">
 
-            <Grid Margin="0,35">
-        
+            <Grid Margin="0,35,0,0" 
+				  HorizontalOptions="FillAndExpand" 
+				  VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout HorizontalOptions="CenterAndExpand" 
+                             Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="humidity.png"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
+                        <Label FontAttributes="Bold" 
+                               FontSize="14" 
+                               HorizontalOptions="Center" 
+                               Text="50%"/>
+                        <Label
+                               FontSize="11" 
+                               HorizontalOptions="Center"
+                               Text="Humidity"
+                                TextColor="#7D7D7D"/>
 
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout Grid.Column="1"
+                             HorizontalOptions="CenterAndExpand" 
+                             Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="wind.png"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
+                        <Label FontAttributes="Bold" 
+                               FontSize="14" 
+                               HorizontalOptions="Center" 
+                               Text="2.6 m/s"/>
+                        <Label
+                               FontSize="11" 
+                               HorizontalOptions="Center"
+                               Text="Wind"
+                                TextColor="#7D7D7D"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2"
+                             HorizontalOptions="CenterAndExpand" 
+                             Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="pressure.png"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
+                        <Label FontAttributes="Bold" 
+                               FontSize="14" 
+                               HorizontalOptions="Center" 
+                               Text="10011 hpa"/>
+                        <Label
+                               FontSize="11" 
+                               HorizontalOptions="Center"
+                               Text="Pressure"
+                                TextColor="#7D7D7D"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Column="3"
+                             HorizontalOptions="CenterAndExpand" 
+                             Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="cloudiness.png"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
+                        <Label FontAttributes="Bold" 
+                               FontSize="14" 
+                               HorizontalOptions="Center" 
+                               Text="10 %"/>
+                        <Label
+                               FontSize="11" 
+                               HorizontalOptions="Center"
+                               Text="Cloudiness"
+                                TextColor="#7D7D7D"/>
+                    </StackLayout>
+                </StackLayout>
             </Grid>
         </Frame>
 
+        <StackLayout Grid.Row="2" Margin="20,40,0,60" Orientation="Vertical" Spacing="20">
+            <StackLayout Orientation="Horizontal" Spacing="40">
+                <Label FontAttributes="Bold" 
+                       FontSize="Small" 
+                       Text="Time of Sunrise"
+                       TextColor="Black"
+                       VerticalOptions="Center"/>
+                <Label FontAttributes="Bold" 
+                       FontSize="15" 
+                       Text="12:00:00 AM"
+                       TextColor="Black"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            
+        </StackLayout>
+        
+        
     </Grid>
 
 </ContentPage>
